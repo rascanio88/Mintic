@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadpage()">
+    <div class="container">
+        <h2>Validador de contraseña</h2>
+        <div class="inputs">
+            <input type="password" id="password" placeholder="Ingresar contraseña">
+            <i></i>
+        </div>
+        <button onmousemove="validar()">Validar</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function validar(){
+            alert("Hola soy una funcion");
+            console.log("Hola soy una funcion");
+        }
+        function loadpage(){
+            Swal.fire({
+            title: "Bienvenido",
+            text: "A mi sitio",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 3800
+            });
+        }
+    </script>
+</body>
+</html>
