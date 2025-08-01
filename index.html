@@ -1,40 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css>
+
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            background: #2a469b;
+            background: linear-gradient(90deg, rgba(42, 70, 155, 1) 0%, rgba(68, 180, 99, 1) 28%, rgba(76, 188, 113, 1) 38%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+
+            background-color: aliceblue;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 0px 32px -22px rgba(0, 0, 0, 0.75);
+        }
+
+        input[type="password"],
+        input[text="text"] 
+        {
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 5px;
+            border: 5px solid#000;
+            margin-top: 15px;
+            margin: 15px 50px 15px 50px;
+        }
+
+        #btn_validate {
+            background-color: aqua rgb(197, 220 150);
+            border: none;
+            padding: 7px 25px;
+            border-radius: 18px;
+            font: size 16px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 75);
+            cursor: pointer;
+
+        }
+
+        #btn_validate:hover {
+            background-color: #68696e;
+            color: white;
+            transform: scale(1.1);
+        }
+       .toggle_password{
+        position: absolute;
+        cursor: pointer;
+        top: 50px;
+        right: 10px;
+        transform: translate(-50%);
+        color: #888;
+       }
+  .inputs   {
+    position: relative;
+    width: 100%;
+  }
+    </style>
 </head>
-<body onload="loadpage()"> 
-    <h1>ramiro ascanio</h1>
-    
+
+<body onload="loadpage()">
     <div class="container">
+        <h1>ramiro ascanio</h1>
         <h2>validador de contraseña</h2>
-    </div> 
-    <div class "inputs">  
-    <input type="password" id="password" placeholder="ingrese su contraseña">
 
-    <i></i>
- 
+        <div class "inputs">
+            <input type="password" id="password" placeholder="ingrese su contraseña">
+
+            <i class "fas fa-eye> </i>
+
+        </div>
+        <button onmousedown="validar()">validar</button>
     </div>
-    <button onmousedown="validar()">validar</button>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- <script>
-    function validar(){
-        alert ("bienvenido al sistema")
-        //console.log("HOLA SOY UN BOTON DE UNA FUNCION")
-    }
-    function loadpage(){
-        Swal.fire({
-  title: "bienvenido",
-  text: "a mi sitio web",
-  icon: "success",
-  showConfigButton: false,
-  timer:3000
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        //function validar() {
+        //    alert("bienvenido al sistema")
+            //console.log("HOLA SOY UN BOTON DE UNA FUNCION")
+        }
+        function loadpage() {
+            Swal.fire({
+                title: "bienvenido",
+                text: "a mi sitio web",
+                icon: "success",
+                showConfigButton: false,
+                timer: 3000
 
- 
-});
-    }
- </script>       
+
+            });
+        }
+
+        const toggle_password = document.getElementById ('.toggle_password');
+        const password = document.getElementById('password');
+        
+        toggle_password.addEventListener ('click', ()=>{
+            const type = password.type === "password" ? 'text' : "password";
+            password.type = type;
+          toggle_password.classList.toggle("fa-eye");
+          toggle_password.classList.toggle("fa-eye");
+
+    });
+
+     </script>
 </body>
+
 </html>
